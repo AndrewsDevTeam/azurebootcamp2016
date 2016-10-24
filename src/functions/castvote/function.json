@@ -5,7 +5,9 @@
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "methods": ["put"]
+      "methods": [
+        "put"
+      ]
     },
     {
       "type": "http",
@@ -19,6 +21,13 @@
       "collectionName": "votes",
       "createIfNotExists": false,
       "connection": "azurebootcamp2016_DOCUMENTDB",
+      "direction": "out"
+    },
+    {
+      "type": "queue",
+      "name": "queueItem",
+      "queueName": "tallyvote",
+      "connection": "azurebc2016functions_STORAGE",
       "direction": "out"
     }
   ],

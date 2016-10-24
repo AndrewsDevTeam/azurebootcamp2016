@@ -1,0 +1,12 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "tallyvote",
+      "connection": "azurebc2016functions_STORAGE"
+    }
+  ],
+  "disabled": false
+}
