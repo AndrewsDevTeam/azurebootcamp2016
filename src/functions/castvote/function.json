@@ -1,16 +1,25 @@
 {
-    "bindings":[
-        {
-            "webHookType": "",
-            "name": "castvote",
-            "type": "httpTrigger",
-            "authLevel": "function"
-        },
-        {
-            "name": "res",
-            "type": "http",
-            "direction": "out"
-        },
-    ],
-    "disabled" : false
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "documentDB",
+      "name": "document",
+      "databaseName": "azurebootcamp2016db",
+      "collectionName": "votes",
+      "createIfNotExists": false,
+      "connection": "azurebootcamp2016_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
 }
