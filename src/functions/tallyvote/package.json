@@ -1,0 +1,8 @@
+{
+    "name":"tallyvote",
+    "version":"0.0.1",
+    "dependencies": {
+        "documentdb": "latest"
+    },
+    "private": true
+}
