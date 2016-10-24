@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": ["put"]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "documentDB",
+      "name": "document",
+      "databaseName": "azurebootcamp2016db",
+      "collectionName": "votes",
+      "createIfNotExists": false,
+      "connection": "azurebootcamp2016_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
