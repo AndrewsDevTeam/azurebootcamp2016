@@ -1,0 +1,16 @@
+{
+    "bindings":[
+        {
+            "webHookType": "",
+            "name": "castvote",
+            "type": "httpTrigger",
+            "authLevel": "function"
+        },
+        {
+            "name": "res",
+            "type": "http",
+            "direction": "out"
+        },
+    ],
+    "disabled" : false
+}
