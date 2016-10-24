@@ -1,9 +1,19 @@
 module.exports = function(context, req) {
     context.log("castvote function processed a request");
 
-    context.bindings.document = {
-        category : "Presenter",
-        candidate : "Alonso"
+    if (req.body && req.body.category && req.body.candidate) {
+        context.bindings.document = {
+            category : req.body.category,
+            candidate : req.body.candidate
+        };
+    } else {
+        context.res = {
+            status: 400,
+            body: "Please include the category and candidate with your vote",
+            headers: {
+                'Content-Type': 'text/plain'
+            }
+        };
     }
 
     context.done();
