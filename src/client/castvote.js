@@ -11,7 +11,7 @@ $(function() {
                 data: JSON.stringify(vote),
                 contentType: "application/json"
             });
-            return false;
+            location.reload();
         });
     });
 });
