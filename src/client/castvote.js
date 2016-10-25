@@ -5,6 +5,7 @@ $(function() {
                 category: $(this).data("category"), 
                 candidate: $(this).data("candidate")
             };
+            console.log(vote);
             $.ajax({
                 type: "PUT",
                 url: "https://azurebootcamp2016.azurewebsites.net/api/castvote",
