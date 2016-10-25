@@ -6,7 +6,6 @@ module.exports = function(context, req) {
             category : req.body.category,
             candidate : req.body.candidate
         };
-        context.bindings.document = item;
         context.bindings.queueItem = item;
     } else {
         context.res = {
@@ -17,6 +16,5 @@ module.exports = function(context, req) {
             }
         };
     }
-
     context.done();
 }

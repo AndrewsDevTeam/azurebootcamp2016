@@ -15,15 +15,6 @@
       "name": "res"
     },
     {
-      "type": "documentDB",
-      "name": "document",
-      "databaseName": "azurebootcamp2016db",
-      "collectionName": "votes",
-      "createIfNotExists": false,
-      "connection": "azurebootcamp2016_DOCUMENTDB",
-      "direction": "out"
-    },
-    {
       "type": "queue",
       "name": "queueItem",
       "queueName": "tallyvote",
