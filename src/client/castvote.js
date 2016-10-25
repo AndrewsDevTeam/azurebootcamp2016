@@ -10,9 +10,11 @@ $(function() {
                 type: "PUT",
                 url: "https://azurebootcamp2016.azurewebsites.net/api/castvote",
                 data: JSON.stringify(vote),
-                contentType: "application/json"
+                contentType: "application/json",
+                success: function() {
+                    location.reload();
+                }
             });
-            location.reload();
         });
     });
 });
